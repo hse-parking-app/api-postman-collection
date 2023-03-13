@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "20cc4821-985f-489b-9b0a-0563f518663a",
+		"_postman_id": "953baeb0-a9e2-4cec-94b7-1931dc31815a",
 		"name": "parkings",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25262080"
 	},
 	"item": [
 		{
@@ -598,7 +599,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n  \"ownerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"model\": \"string\",\r\n  \"lengthMeters\": 1,\r\n  \"weightTons\": 1,\r\n  \"registryNumber\": \"string\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -750,7 +751,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n  \"name\": \"Mary\",\r\n  \"email\": \"mr.y\",\r\n  \"password\": \"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -801,7 +802,35 @@
 		},
 		{
 			"name": "/reservations",
-			"item": []
+			"item": [
+				{
+					"name": "/reservations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\": \"c47d62f3-42d7-4b25-96eb-e6808334626e\",\r\n    \"employeeId\": \"662a0232-5091-4d14-917f-d49242e944d2\",\r\n    \"parkingSpotId\": \"85068fa2-05af-47b4-b954-047d5830e74d\",\r\n    \"startTime\": \"2023-03-14T23:56:11.735\",\r\n    \"endTime\": \"2023-03-15T00:57:11.735\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ip}}/reservations",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"auth": {
